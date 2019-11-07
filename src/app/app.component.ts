@@ -8,14 +8,16 @@ import { FlexModalService } from './shared-components/flex-modal/flex-modal.serv
 })
 export class AppComponent implements OnInit {
   title = 'final';
-  aboutText: string;
+  aboutText = 'This application was created by MaiBee Her (C)';
   constructor(private flexModal: FlexModalService) { }
 
   ngOnInit() {
   }
 
   // Launch flex modal or alert (3pts reduced) showing about text
-  openAboutModal() {
+  open() {
+    this.flexModal.openDialog('about-modal');
+    // alert('This application was created by MaiBee Her (C)');
   }
 
 }
